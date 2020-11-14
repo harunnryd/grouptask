@@ -12,23 +12,35 @@ import java.util.List;
  *
  * @author runwols
  */
-public class Results{
-    @JsonProperty("datetime") 
-    public List<Datetime> getDatetime() { 
-		 return this.datetime; } 
-    public void setDatetime(List<Datetime> datetime) { 
-		 this.datetime = datetime; } 
+public class Results {
+
+    @JsonProperty("datetime")
+    public List<Datetime> getDatetime() {
+        return this.datetime;
+    }
+
+    public void setDatetime(List<Datetime> datetime) {
+        this.datetime = datetime;
+    }
     List<Datetime> datetime;
-    @JsonProperty("location") 
-    public Location getLocation() { 
-		 return this.location; } 
-    public void setLocation(Location location) { 
-		 this.location = location; } 
+
+    @JsonProperty("location")
+    public Location getLocation() {
+        return this.location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
     Location location;
-    @JsonProperty("settings") 
-    public Settings getSettings() { 
-		 return this.settings; } 
-    public void setSettings(Settings settings) { 
-		 this.settings = settings; } 
+
+    @JsonProperty("settings")
+    public Settings getSettings() {
+        return this.settings;
+    }
+
+    public void setSettings(Settings settings) {
+        this.settings = settings;
+    }
     Settings settings;
 }

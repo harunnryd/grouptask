@@ -38,7 +38,7 @@ public class Root {
         return this.schedule;
     }
 
-    public void setJadwal(Schedule schedule) {
+    public void setSchedule(Schedule schedule) {
         this.schedule = schedule;
     }
     Schedule schedule;

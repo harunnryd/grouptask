@@ -11,23 +11,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  * @author runwols
  */
-public class Root{
-    @JsonProperty("code") 
-    public int getCode() { 
-		 return this.code; } 
-    public void setCode(int code) { 
-		 this.code = code; } 
+public class Root {
+
+    @JsonProperty("code")
+    public int getCode() {
+        return this.code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
     int code;
-    @JsonProperty("status") 
-    public String getStatus() { 
-		 return this.status; } 
-    public void setStatus(String status) { 
-		 this.status = status; } 
+
+    @JsonProperty("status")
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
     String status;
-    @JsonProperty("results") 
-    public Results getResults() { 
-		 return this.results; } 
-    public void setResults(Results results) { 
-		 this.results = results; } 
+
+    @JsonProperty("results")
+    public Results getResults() {
+        return this.results;
+    }
+
+    public void setResults(Results results) {
+        this.results = results;
+    }
     Results results;
 }

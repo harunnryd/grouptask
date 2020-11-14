@@ -7,7 +7,6 @@ package grouptask;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 import response.firstapiresponse.Root;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,13 +20,14 @@ import java.util.Date;
  * @author runwols
  */
 public class FirstApiProvider implements PrayerProvider {
+
     public void getPrayerTime() throws IOException {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-M-dd");
         String currentDate = formatter.format(date);
-        
+
         try {
-             // Create a neat value object to hold the URL
+            // Create a neat value object to hold the URL
             URL url = new URL("https://api.banghasan.com/sholat/format/json/jadwal/kota/667/tanggal/" + currentDate);
 
             // Open a connection(?) on the URL(?) and cast the response(??)
@@ -49,9 +49,9 @@ public class FirstApiProvider implements PrayerProvider {
             e.printStackTrace();
         }
     }
-    
+
     public void printResponse(Root response) {
-        System.out.println("=== Jadwal Sholat dan Imsakiyah ===");
+        System.out.println("=== Jadwal Sholat dan Imsakiyah dari Provider #1 ===");
         System.out.println("[+] Untuk Wilayah DKI Jakarta");
         System.out.println("[+] Tanggal : " + response.getQuery().getDate() + "\n");
 
@@ -62,7 +62,7 @@ public class FirstApiProvider implements PrayerProvider {
         System.out.println("Ashar   : " + response.getSchedule().getData().getAsr());
         System.out.println("Maghrib : " + response.getSchedule().getData().getMaghrib());
         System.out.println("Isya    : " + response.getSchedule().getData().getIsha());
-        
+
         System.out.println(
                 "\n\"Dan laksanakanlah sholat, tunaikanlah zakat, dan \ntaatlah kepada Rasul (Muhammad), agar kamu diberi rahmat.\"\n(QS. An-Nuur:56)\n");
     }

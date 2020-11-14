@@ -11,23 +11,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  * @author runwols
  */
-public class Date{
-    @JsonProperty("timestamp") 
-    public int getTimestamp() { 
-		 return this.timestamp; } 
-    public void setTimestamp(int timestamp) { 
-		 this.timestamp = timestamp; } 
+public class Date {
+
+    @JsonProperty("timestamp")
+    public int getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(int timestamp) {
+        this.timestamp = timestamp;
+    }
     int timestamp;
-    @JsonProperty("gregorian") 
-    public String getGregorian() { 
-		 return this.gregorian; } 
-    public void setGregorian(String gregorian) { 
-		 this.gregorian = gregorian; } 
+
+    @JsonProperty("gregorian")
+    public String getGregorian() {
+        return this.gregorian;
+    }
+
+    public void setGregorian(String gregorian) {
+        this.gregorian = gregorian;
+    }
     String gregorian;
-    @JsonProperty("hijri") 
-    public String getHijri() { 
-		 return this.hijri; } 
-    public void setHijri(String hijri) { 
-		 this.hijri = hijri; } 
+
+    @JsonProperty("hijri")
+    public String getHijri() {
+        return this.hijri;
+    }
+
+    public void setHijri(String hijri) {
+        this.hijri = hijri;
+    }
     String hijri;
 }

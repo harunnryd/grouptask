@@ -49,9 +49,9 @@ public class SecondApiProvider implements PrayerProvider {
     }
     
     public void printResponse(Root response) {
-        System.out.println("=== Jadwal Sholat dan Imsakiyah ===");
+        System.out.println("=== Jadwal Sholat dan Imsakiyah dari Provider #2 ===");
         System.out.println("[+] Untuk Wilayah DKI Jakarta");
-        System.out.println("[+] Tanggal : " + response.getResults().getDatetime().get(1).getDate().getGregorian() + "\n");
+        System.out.println("[+] Tanggal : " + response.getResults().getDatetime().get(0).getDate().getGregorian() + "\n");
 
         System.out.println("Terbit  : " + response.getResults().getDatetime().get(0).getTimes().getSunrise());
         System.out.println("Subuh   : " + response.getResults().getDatetime().get(0).getTimes().getFajr());
